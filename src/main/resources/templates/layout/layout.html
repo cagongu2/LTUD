@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Layout</title>
+</head>
+<body>
+<header>
+    <!-- Header content -->
+    <nav>
+        <ul>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/register}">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main th:replace="layout/layout :: content"></main>
+
+<footer>
+    <!-- Footer content -->
+</footer>
+</body>
+</html>
