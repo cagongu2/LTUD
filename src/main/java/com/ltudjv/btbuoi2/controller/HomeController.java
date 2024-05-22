@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -17,8 +16,6 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private BankAccountRepository bankAccountRepository;
 
     @Autowired
     private BankAccountService bankAccountService;
@@ -26,7 +23,7 @@ public class HomeController {
     @GetMapping("/users")
     public String listUsers(Model model) {
         model.addAttribute("users", userService.listUsers());
-        return "user-list.htm";
+        return "user-list";
     }
 
     @GetMapping("/accounts")
